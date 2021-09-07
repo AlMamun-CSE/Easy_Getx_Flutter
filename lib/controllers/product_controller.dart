@@ -4,7 +4,7 @@ import 'package:rest_api_and_getx/services/remote_services.dart';
 
 class ProductController extends GetxController {
   var isLoading = true.obs;
-  var productList = List<Product>().obs;
+  var productList = <Product>[].obs;
 
   @override
   void onInit() {
@@ -16,7 +16,7 @@ class ProductController extends GetxController {
     try {
       isLoading(true);
       var products = await RemoteServices.fetchProducts();
-      if (products != null) {
+      if (products.isNotEmpty) {
         productList.value = products;
       }
     } finally {

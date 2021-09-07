@@ -6,7 +6,7 @@ import 'package:rest_api_and_getx/views/home/widgets/product_tile.dart';
 class HomePage extends StatelessWidget {
   final ProductController productController = Get.put(ProductController());
   //static load data for grid view
-  
+
   // final List<String> images = [
   //   "https://uae.microless.com/cdn/no_image.jpg",
   //   "https://images-na.ssl-images-amazon.com/images/I/81aF3Ob-2KL._UX679_.jpg",
@@ -23,14 +23,17 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.transparent,
         elevation: 0,
         leading: Icon(
           Icons.arrow_back_ios,
+          color: Colors.black,
         ),
         actions: [
           IconButton(
             icon: Icon(
               Icons.shopping_cart,
+              color: Colors.black,
             ),
             onPressed: () {},
           )

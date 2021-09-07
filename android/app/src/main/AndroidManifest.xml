@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.rest_api_and_getx">
    <application
-        android:label="rest_api_and_getx"
+        android:label="E-Commerces"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

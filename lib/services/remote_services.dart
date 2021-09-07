@@ -12,7 +12,7 @@ class RemoteServices {
       return productFromJson(jsonString);
     } else {
       //show error message
-      return null;
+      return productFromJson("Null");
     }
   }
 }

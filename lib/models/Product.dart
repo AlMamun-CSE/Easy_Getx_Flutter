@@ -13,7 +13,7 @@ String productToJson(List<Product> data) =>
 
 class Product {
   int id;
-  Brand brand;
+  Brand? brand;
   String name;
   String price;
   dynamic priceSign;
@@ -22,8 +22,8 @@ class Product {
   String productLink;
   String websiteLink;
   String description;
-  double rating;
-  String category;
+  double? rating;
+  String? category;
   String productType;
   List<dynamic> tagList;
   DateTime createdAt;
@@ -34,25 +34,25 @@ class Product {
 
 
   Product({
-     this.id,
-    this.brand,
-     this.name,
-     this.price,
-     this.priceSign,
-     this.currency,
-     this.imageLink,
-     this.productLink,
-     this.websiteLink,
-     this.description,
-     this.rating,
-     this.category,
-     this.productType,
-     this.tagList,
-     this.createdAt,
-     this.updatedAt,
-     this.productApiUrl,
-     this.apiFeaturedImage,
-     this.productColors,
+     required this.id,
+     required this.brand,
+     required this.name,
+     required this.price,
+     required this.priceSign,
+     required this.currency,
+     required this.imageLink,
+     required this.productLink,
+     required this.websiteLink,
+     required this.description,
+    this.rating,
+    this.category,
+     required this.productType,
+     required this.tagList,
+     required this.createdAt,
+     required this.updatedAt,
+     required this.productApiUrl,
+     required this.apiFeaturedImage,
+     required this.productColors,
   });
 
   var isFavorite = false.obs;
@@ -110,10 +110,10 @@ final brandValues = EnumValues({"maybelline": Brand.MAYBELLINE});
 
 class ProductColor {
   String hexValue;
-  String colourName; 
+  String? colourName; 
   
   ProductColor({
-     this.hexValue,
+     required this.hexValue,
      this.colourName,
   });
 
@@ -131,12 +131,12 @@ class ProductColor {
 
 class EnumValues<T> {
   Map<String, T> map;
-  Map<T, String> reverseMap;
+  late Map<T, String> reverseMap;
 
   EnumValues(this.map);
 
   Map<T, String> get reverse {
-    if (reverseMap == null) {
+    if (reverseMap.isEmpty) {
       reverseMap = map.map((k, v) => new MapEntry(v, k));
     }
     return reverseMap;
