@@ -23,6 +23,22 @@ class HomePage extends StatelessWidget {
           )
         ],
       ),
+      body: Column(
+        children: [
+          Row(
+            children: [
+              Text(
+                "ShopX",
+                style: TextStyle(
+                  fontFamily: 'avenir',
+                  fontSize: 32,
+                  fontWeight: FontWeight.w900,
+                ),
+              ),
+            ],
+          ),
+        ],
+      ),
     );
   }
 }
