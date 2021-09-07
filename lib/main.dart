@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:rest_api_and_getx/views/homepage.dart';
+import 'package:rest_api_and_getx/views/home/homepage.dart';
 
 void main() {
   runApp(MyApp());
