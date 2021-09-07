@@ -6,7 +6,23 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Colors.transparent,
+        leading: Icon(
+          Icons.arrow_back_ios,
+          color: Colors.black,
+        ),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: Icon(
+              Icons.shopping_cart,
+              color: Colors.black,
+            ),
+          )
+        ],
+      ),
     );
   }
 }
